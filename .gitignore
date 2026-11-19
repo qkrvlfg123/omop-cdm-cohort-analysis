@@ -17,3 +17,6 @@ __pycache__/
 .Rhistory
 .RData
 .Rproj.user/
+
+# R 패키지가 실패 시 남기는 오류 보고서
+errorReport*.txt
