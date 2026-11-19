@@ -1,0 +1,19 @@
+# 데이터 파일은 커밋하지 않는다 (스크립트로 언제든 다시 받을 수 있음 → 재현성은 코드로 보장)
+data/*
+!data/.gitkeep
+
+# ACHILLES 실행 로그 (결과 CSV 는 커밋)
+results/achilles/log_*.txt
+results/achilles/errorReport*.txt
+
+# 환자당 1행짜리 큰 중간 산출물은 제외 (요약표만 커밋)
+results/tables/i02_patient_summary_avoid_fanout.csv
+results/tables/c04_baseline_characteristics.csv
+results/tables/c06_outcome_time_to_event.csv
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.Rhistory
+.RData
+.Rproj.user/

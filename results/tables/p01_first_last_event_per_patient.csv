@@ -1,0 +1,21 @@
+﻿person_id,n_conditions,first_dx_date,first_dx_name,last_dx_date,last_dx_name,days_between
+1,26,1953-02-06,Streptococcal sore throat,2018-01-04,Viral sinusitis,23708
+2,39,1920-07-01,Otitis media,2008-03-15,Pneumonia,32034
+3,40,1920-09-16,Viral sinusitis,2018-10-22,Viral sinusitis,35830
+5,23,1971-03-12,Acute bronchitis,2016-07-22,Viral sinusitis,16569
+6,17,1965-06-23,Otitis media,2005-07-13,Osteoarthritis,14630
+7,14,1968-12-06,Otitis media,2008-10-17,Osteoarthritis,14560
+9,24,1980-11-14,Viral sinusitis,2016-07-19,Viral sinusitis,13031
+11,29,1955-10-23,Acute viral pharyngitis,2019-04-21,Sinusitis,23191
+12,29,1964-08-22,Otitis media,2013-02-12,Viral sinusitis,17706
+16,18,1972-04-10,Otitis media,2015-02-13,Acute viral pharyngitis,15649
+17,30,1951-04-10,Otitis media,2015-10-25,Viral sinusitis,23574
+18,23,1967-07-16,Viral sinusitis,2018-11-05,Viral sinusitis,18740
+19,21,1949-11-26,Concussion with no loss of consciousness,2018-08-13,Viral sinusitis,25097
+23,15,1986-04-28,Laceration of forearm,2016-01-21,Otitis media,10860
+28,9,1979-11-30,Otitis media,2015-05-10,Osteoarthritis,12945
+30,31,1971-01-19,Atopic dermatitis,2018-04-23,Acute bronchitis,17261
+32,33,1944-06-24,Acute bronchitis,2011-05-28,Viral sinusitis,24444
+35,35,1960-06-20,Otitis media,2017-12-14,Viral sinusitis,20996
+36,34,1959-01-28,Viral sinusitis,2018-01-09,Atrial fibrillation,21531
+38,21,1965-08-17,Viral sinusitis,2018-01-09,Viral sinusitis,19138

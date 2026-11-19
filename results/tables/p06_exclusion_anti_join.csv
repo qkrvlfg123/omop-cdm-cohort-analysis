@@ -1,0 +1,5 @@
+﻿method,n_persons
+전체 골관절염 환자,2694
+궤양 이력 없음 — NOT EXISTS,1892
+궤양 이력 없음 — LEFT JOIN + IS NULL,1892
+궤양 이력 없음 — EXCEPT,1892

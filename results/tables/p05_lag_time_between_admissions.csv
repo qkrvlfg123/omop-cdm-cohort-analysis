@@ -1,0 +1,4 @@
+﻿readmission_category,n_admissions,n_persons,pct_of_admissions,mean_days_since_discharge,min_days_since_discharge
+0) 첫 입원 (직전 입원 없음),890,890,85.8,,
+2) 31~365일 재입원,1,1,0.1,290.0,290
+3) 1년 초과 후 재입원,146,134,14.1,8309.0,390

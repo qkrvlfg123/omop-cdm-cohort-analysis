@@ -1,0 +1,21 @@
+﻿cohort_name,rank_in_cohort,condition_name,n_persons,pct_of_cohort
+celecoxib,1,Viral sinusitis,1775,98.6
+celecoxib,2,Acute viral pharyngitis,1660,92.2
+celecoxib,3,Acute bronchitis,1559,86.6
+celecoxib,4,Otitis media,1312,72.9
+celecoxib,5,Streptococcal sore throat,940,52.2
+celecoxib,6,Sprain of ankle,718,39.9
+celecoxib,7,Peptic ulcer,658,36.6
+celecoxib,8,Concussion with no loss of consciousness,448,24.9
+celecoxib,9,Sinusitis,386,21.4
+celecoxib,10,Chronic sinusitis,384,21.3
+diclofenac,1,Viral sinusitis,819,98.7
+diclofenac,2,Acute viral pharyngitis,743,89.5
+diclofenac,3,Acute bronchitis,733,88.3
+diclofenac,4,Otitis media,623,75.1
+diclofenac,5,Streptococcal sore throat,459,55.3
+diclofenac,6,Sprain of ankle,333,40.1
+diclofenac,7,Concussion with no loss of consciousness,182,21.9
+diclofenac,8,Sinusitis,178,21.4
+diclofenac,9,Chronic sinusitis,167,20.1
+diclofenac,10,Whiplash injury to neck,164,19.8

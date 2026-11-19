@@ -1,0 +1,10 @@
+﻿table_name,n_rows,n_persons
+drug_exposure,67707,2694
+condition_occurrence,65332,2694
+measurement,44053,2686
+procedure_occurrence,37409,2593
+observation_period,5343,5343
+person,2694,2694
+observation,1477,671
+visit_occurrence,1037,890
+death,0,0

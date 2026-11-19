@@ -1,0 +1,3 @@
+﻿cohort_name,n_persons,n_events,cumulative_incidence_pct,person_years,rate_per_1000_py,median_days_to_event,min_days_to_event,max_days_to_event
+celecoxib,1800,355.0,19.72,1475.7,240.6,48.0,5,89
+diclofenac,830,124.0,14.94,712.3,174.1,45.5,5,89

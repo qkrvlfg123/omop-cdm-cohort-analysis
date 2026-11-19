@@ -1,0 +1,9 @@
+﻿check_name,n_problem,n_total
+1. person에 없는 환자의 observation_period 행,2649,5343
+2. 방문(visit)과 연결되지 않는 drug_exposure 행,67490,67707
+3. 수치 결과가 없는 measurement 행,44053,44053
+4. 인종(race) 미매핑 환자 (concept_id = 0),451,2694
+5. days_supply 가 0 또는 NULL 인 drug_exposure 행,32904,67707
+6. 종료일 < 시작일 인 drug_exposure 행,0,67707
+7. 관찰기간 밖에 기록된 condition_occurrence 행,85,65332
+8. death 테이블 행 수 (0이면 사망 분석 불가),0,2694

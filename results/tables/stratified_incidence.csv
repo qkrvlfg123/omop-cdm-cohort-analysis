@@ -1,0 +1,7 @@
+﻿stratum,cohort_name,n_persons,n_events,risk_pct,risk_ratio_cele_vs_diclo
+전체 (보정 전),celecoxib,1800,355,19.7,1.32
+전체 (보정 전),diclofenac,830,124,14.9,1.32
+궤양 과거력 없음,celecoxib,1142,112,9.8,0.68
+궤양 과거력 없음,diclofenac,698,101,14.5,0.68
+궤양 과거력 있음,celecoxib,658,243,36.9,2.12
+궤양 과거력 있음,diclofenac,132,23,17.4,2.12

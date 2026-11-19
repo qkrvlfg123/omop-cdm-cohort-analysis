@@ -1,0 +1,21 @@
+﻿concept_id,condition_name,vocabulary_id,n_records,n_persons,records_per_person,pct_of_all_persons
+80180,Osteoarthritis,SNOMED,2694,2694,1.0,100.0
+40481087,Viral sinusitis,SNOMED,17268,2686,6.43,99.7
+4112343,Acute viral pharyngitis,SNOMED,10217,2606,3.92,96.7
+260139,Acute bronchitis,SNOMED,8184,2543,3.22,94.4
+372328,Otitis media,SNOMED,3605,2025,1.78,75.2
+28060,Streptococcal sore throat,SNOMED,2656,1677,1.58,62.2
+81151,Sprain of ankle,SNOMED,1915,1357,1.41,50.4
+378001,Concussion with no loss of consciousness,SNOMED,1013,852,1.19,31.6
+4283893,Sinusitis,SNOMED,1001,833,1.2,30.9
+257012,Chronic sinusitis,SNOMED,825,812,1.02,30.1
+4027663,Peptic ulcer,SNOMED,802,802,1.0,29.8
+4294548,Acute bacterial sinusitis,SNOMED,939,786,1.19,29.2
+4218389,Whiplash injury to neck,SNOMED,825,708,1.17,26.3
+78272,Sprain of wrist,SNOMED,770,677,1.14,25.1
+4278672,Fracture of forearm,SNOMED,569,510,1.12,18.9
+192671,Gastrointestinal hemorrhage,SNOMED,479,479,1.0,17.8
+4113008,Laceration of hand,SNOMED,500,462,1.08,17.1
+4156265,Facial laceration,SNOMED,497,459,1.08,17.0
+4155034,Laceration of forearm,SNOMED,507,459,1.1,17.0
+4152936,Laceration of thigh,SNOMED,499,455,1.1,16.9

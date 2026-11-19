@@ -1,0 +1,252 @@
+"analysis_id","n_result_rows","sum_count_value","analysis_name","category"
+0,1,2694,"Source name","General"
+1,1,2694,"Number of persons","Person"
+2,2,2694,"Number of persons by gender","Person"
+3,68,2664,"Number of persons by year of birth","Person"
+4,4,2694,"Number of persons by race","Person"
+5,2,2694,"Number of persons by ethnicity","Person"
+10,113,2589,"Number of all persons by year of birth by gender","Person"
+11,113,2589,"Number of non-deceased persons by year of birth by gender","Person"
+12,5,2694,"Number of persons by race and ethnicity","Person"
+101,1,2692,"Number of persons by age, with age at first observation period","Person"
+102,2,2692,"Number of persons by gender by age, with age at first observation period","Person"
+108,105,1260,"Number of persons by length of observation period, in 30d increments","Observation Period"
+109,109,205518,"Number of persons with continuous observation in each year","Observation Period"
+110,1074,2478896,"Number of persons with continuous observation in each month","Observation Period"
+111,436,3300,"Number of persons by observation period start month","Observation Period"
+112,37,5043,"Number of persons by observation period end month","Observation Period"
+113,1,5343,"Number of persons by number of observation periods","Observation Period"
+116,1222,161885,"Number of persons with at least one day of observation in each year by gender and age decile","Observation Period"
+117,1324,2533287,"Number of persons with at least one day of observation in each month","Observation Period"
+119,1,5343,"Number of observation period records by period_type_concept_id","Observation Period"
+200,1,890,"Number of persons with at least one visit occurrence, by visit_concept_id","Visit Occurrence"
+201,1,1037,"Number of visit occurrence records, by visit_concept_id","Visit Occurrence"
+202,2,12,"Number of persons by visit occurrence start month, by visit_concept_id","Visit Occurrence"
+204,27,186,"Number of persons with at least one visit occurrence, by visit_concept_id by calendar year by gender by age decile","Visit Occurrence"
+212,27,186,"Number of persons with at least one visit occurrence, by calendar year by gender by age decile","Visit Occurrence"
+220,2,12,"Number of visit occurrence records by visit occurrence start month","Visit Occurrence"
+221,60,973,"Number of persons by visit start year","Visit Occurrence"
+225,1,1037,"Number of visit_occurrence records by visit_source_concept_id","Visit Occurrence"
+226,10,215978,"Number of records by domain by visit_concept_id","Visit Occurrence"
+400,77,32930,"Number of persons with at least one condition occurrence, by condition_concept_id","Condition Occurrence"
+401,77,65236,"Number of condition occurrence records, by condition_concept_id","Condition Occurrence"
+402,2848,37090,"Number of persons by condition occurrence start month, by condition_concept_id","Condition Occurrence"
+404,2413,38094,"Number of persons with at least one condition occurrence, by condition_concept_id by calendar year by gender by age decile","Condition Occurrence"
+405,77,65236,"Number of condition occurrence records, by condition_concept_id by condition_type_concept_id","Condition Occurrence"
+414,1,65247,"Number of condition occurrence records, by condition_status_concept_id","Condition Occurrence"
+415,1,65247,"Number of condition occurrence records, by condition_type_concept_id","Condition Occurrence"
+416,1,65247,"Number of condition occurrence records, by condition_status_concept_id, condition_type_concept_id","Condition Occurrence"
+420,1121,64671,"Number of condition occurrence records by condition occurrence start month","Condition Occurrence"
+425,77,65236,"Number of condition_occurrence records by condition_source_concept_id","Condition Occurrence"
+600,47,11471,"Number of persons with at least one procedure occurrence, by procedure_concept_id","Procedure Occurrence"
+601,47,37386,"Number of procedure occurrence records, by procedure_concept_id","Procedure Occurrence"
+602,568,15385,"Number of persons by procedure occurrence start month, by procedure_concept_id","Procedure Occurrence"
+604,490,4606,"Number of persons with at least one procedure occurrence, by procedure_concept_id by calendar year by gender by age decile","Procedure Occurrence"
+605,47,37386,"Number of procedure occurrence records, by procedure_concept_id by procedure_type_concept_id","Procedure Occurrence"
+620,849,36566,"Number of procedure occurrence records  by procedure occurrence start month","Procedure Occurrence"
+625,47,37386,"Number of procedure_occurrence records by procedure_source_concept_id","Procedure Occurrence"
+630,1,37394,"Number of procedure_occurrence records inside a valid observation period","Observation Period"
+691,214,19467,"Percentage of total persons that have at least x procedures","Procedure Occurrence"
+700,100,37441,"Number of persons with at least one drug exposure, by drug_concept_id","Drug Exposure"
+701,103,67596,"Number of drug exposure records, by drug_concept_id","Drug Exposure"
+702,3290,41192,"Number of persons by drug exposure start month, by drug_concept_id","Drug Exposure"
+704,2551,46080,"Number of persons with at least one drug exposure, by drug_concept_id by calendar year by gender by age decile","Drug Exposure"
+705,103,67596,"Number of drug exposure records, by drug_concept_id by drug_type_concept_id","Drug Exposure"
+720,1006,66842,"Number of drug exposure records  by drug exposure start month","Drug Exposure"
+725,103,67596,"Number of drug_exposure records by drug_source_concept_id","Drug Exposure"
+791,198,67420,"Percentage of total persons that have at least x drug exposures","Drug Exposure"
+800,19,1472,"Number of persons with at least one observation occurrence, by observation_concept_id","Observation"
+801,19,1472,"Number of observation occurrence records, by observation_concept_id","Observation"
+804,5,31,"Number of persons with at least one observation occurrence, by observation_concept_id by calendar year by gender by age decile","Observation"
+805,19,1472,"Number of observation occurrence records, by observation_concept_id by observation_type_concept_id","Observation"
+807,19,1472,"Number of observation occurrence records, by observation_concept_id and unit_concept_id","Observation"
+820,96,849,"Number of observation records  by observation start month","Observation"
+822,19,1472,"Number of observation records, by observation_concept_id and value_as_concept_id","Observation"
+823,19,1472,"Number of observation records, by observation_concept_id and qualifier_concept_id","Observation"
+825,19,1472,"Number of observation records by observation_source_concept_id","Observation"
+826,1,1474,"Number of observation records by value_as_concept_id","Observation"
+827,1,1474,"Number of observation records by unit_concept_id","Observation"
+891,19,1472,"Percentage of total persons that have at least x observations","Observation"
+900,79,29004,"Number of persons with at least one drug era, by drug_concept_id","Drug Era"
+901,80,52409,"Number of drug era records, by drug_concept_id","Drug Era"
+902,2364,24930,"Number of persons by drug era start month, by drug_concept_id","Drug Era"
+904,2457,32481,"Number of persons with at least one drug era, by drug_concept_id by calendar year by gender by age decile","Drug Era"
+920,1052,51781,"Number of drug era records by drug era start month","Drug Era"
+1000,78,33346,"Number of persons with at least one condition era, by condition_concept_id","Condition Era"
+1001,78,65620,"Number of condition era records, by condition_concept_id","Condition Era"
+1002,2842,37033,"Number of persons by condition era start month, by condition_concept_id","Condition Era"
+1004,2413,38084,"Number of persons with at least one condition era, by condition_concept_id by calendar year by gender by age decile","Condition Era"
+1020,1121,65056,"Number of condition era records by condition era start month","Condition Era"
+1326,5,215978,"Number of records by domain by visit_detail_concept_id","Visit Detail"
+1800,55,14997,"Number of persons with at least one measurement occurrence, by measurement_concept_id","Measurement"
+1801,55,44049,"Number of measurement occurrence records, by measurement_concept_id","Measurement"
+1802,1937,27377,"Number of persons by measurement occurrence start month, by measurement_concept_id","Measurement"
+1804,1874,27245,"Number of persons with at least one mesurement  occurrence, by measurement_concept_id by calendar year by gender by age decile","Measurement"
+1805,55,44049,"Number of measurement occurrence records, by measurement_concept_id by measurement_type_concept_id","Measurement"
+1807,55,44049,"Number of measurement occurrence records, by measurement_concept_id and unit_concept_id","Measurement"
+1814,1,44049,"Number of measurement records with no value (numeric, string, or concept)","Measurement"
+1820,978,43375,"Number of measurement records  by measurement start month","Measurement"
+1821,1,44053,"Number of measurement records with no numeric value","Measurement"
+1822,55,44049,"Number of measurement records, by measurement_concept_id and value_as_concept_id","Measurement"
+1823,55,44049,"Number of measurement records, by measurement_concept_id and operator_concept_id","Measurement"
+1825,55,44049,"Number of measurement records by measurement_source_concept_id","Measurement"
+1826,1,44049,"Number of measurement records by value_as_concept_id","Measurement"
+1827,1,44049,"Number of measurement records by unit_concept_id","Measurement"
+1891,243,43627,"Percentage of total persons that have at least x measurements","Measurement"
+1900,29,222235,"Source values mapped to concept_id 0 by table, by column, by source_value","Completeness"
+2000,1,2694,"Number of patients with at least 1 Dx and 1 Rx","Completeness"
+2001,1,2593,"Number of patients with at least 1 Dx and 1 Proc","Completeness"
+2002,1,2686,"Number of patients with at least 1 Meas, 1 Dx and 1 Rx","Completeness"
+2003,1,890,"Number of patients with at least 1 Visit","Completeness"
+2004,31,50274,"Number of distinct patients that overlap between specific domains","Completeness"
+2e+06,1,6,NA,NA
+2000001,1,6,NA,NA
+2000002,1,6,NA,NA
+2000003,1,6,NA,NA
+2000004,1,6,NA,NA
+2000005,1,6,NA,NA
+2000010,1,6,NA,NA
+2000011,1,6,NA,NA
+2000012,1,6,NA,NA
+2000101,1,6,NA,NA
+2000102,1,6,NA,NA
+2000108,1,6,NA,NA
+2000109,1,6,NA,NA
+2000110,1,6,NA,NA
+2000111,1,6,NA,NA
+2000112,1,6,NA,NA
+2000113,1,6,NA,NA
+2000116,1,6,NA,NA
+2000117,1,6,NA,NA
+2000119,1,6,NA,NA
+2000200,1,6,NA,NA
+2000201,1,6,NA,NA
+2000202,1,6,NA,NA
+2000204,1,6,NA,NA
+2000207,1,6,NA,NA
+2000209,1,6,NA,NA
+2000210,1,6,NA,NA
+2000212,1,6,NA,NA
+2000220,1,6,NA,NA
+2000221,1,6,NA,NA
+2000225,1,6,NA,NA
+2000226,1,6,NA,NA
+2000300,1,6,NA,NA
+2000301,1,6,NA,NA
+2000303,1,6,NA,NA
+2000325,1,6,NA,NA
+2000400,1,6,NA,NA
+2000401,1,6,NA,NA
+2000402,1,6,NA,NA
+2000404,1,6,NA,NA
+2000405,1,6,NA,NA
+2000414,1,6,NA,NA
+2000415,1,6,NA,NA
+2000416,1,6,NA,NA
+2000420,1,6,NA,NA
+2000425,1,6,NA,NA
+2000500,1,6,NA,NA
+2000501,1,6,NA,NA
+2000502,1,6,NA,NA
+2000504,1,6,NA,NA
+2000505,1,6,NA,NA
+2000525,1,6,NA,NA
+2000600,1,6,NA,NA
+2000601,1,6,NA,NA
+2000602,1,6,NA,NA
+2000604,1,6,NA,NA
+2000605,1,6,NA,NA
+2000620,1,6,NA,NA
+2000625,1,6,NA,NA
+2000630,1,6,NA,NA
+2000691,1,6,NA,NA
+2000700,1,6,NA,NA
+2000701,1,6,NA,NA
+2000702,1,6,NA,NA
+2000704,1,6,NA,NA
+2000705,1,6,NA,NA
+2000720,1,6,NA,NA
+2000725,1,6,NA,NA
+2000791,1,6,NA,NA
+2000800,1,6,NA,NA
+2000801,1,6,NA,NA
+2000802,1,6,NA,NA
+2000804,1,6,NA,NA
+2000805,1,6,NA,NA
+2000807,1,6,NA,NA
+2000814,1,6,NA,NA
+2000820,1,6,NA,NA
+2000822,1,6,NA,NA
+2000823,1,6,NA,NA
+2000825,1,6,NA,NA
+2000826,1,6,NA,NA
+2000827,1,6,NA,NA
+2000891,1,6,NA,NA
+2000900,1,6,NA,NA
+2000901,1,6,NA,NA
+2000902,1,6,NA,NA
+2000904,1,6,NA,NA
+2000920,1,6,NA,NA
+2001000,1,6,NA,NA
+2001001,1,6,NA,NA
+2001002,1,6,NA,NA
+2001004,1,6,NA,NA
+2001020,1,6,NA,NA
+2001100,1,6,NA,NA
+2001101,1,6,NA,NA
+2001102,1,6,NA,NA
+2001103,1,6,NA,NA
+2001200,1,6,NA,NA
+2001201,1,6,NA,NA
+2001202,1,6,NA,NA
+2001203,1,6,NA,NA
+2001300,1,6,NA,NA
+2001301,1,6,NA,NA
+2001302,1,6,NA,NA
+2001304,1,6,NA,NA
+2001312,1,6,NA,NA
+2001320,1,6,NA,NA
+2001321,1,6,NA,NA
+2001325,1,6,NA,NA
+2001326,1,6,NA,NA
+2001408,1,6,NA,NA
+2001409,1,6,NA,NA
+2001410,1,6,NA,NA
+2001411,1,6,NA,NA
+2001412,1,6,NA,NA
+2001413,1,6,NA,NA
+2001425,1,6,NA,NA
+2001800,1,6,NA,NA
+2001801,1,6,NA,NA
+2001802,1,6,NA,NA
+2001804,1,6,NA,NA
+2001805,1,6,NA,NA
+2001807,1,6,NA,NA
+2001811,1,6,NA,NA
+2001814,1,6,NA,NA
+2001818,1,6,NA,NA
+2001819,1,6,NA,NA
+2001820,1,6,NA,NA
+2001821,1,6,NA,NA
+2001822,1,6,NA,NA
+2001823,1,6,NA,NA
+2001825,1,6,NA,NA
+2001826,1,6,NA,NA
+2001827,1,6,NA,NA
+2001891,1,6,NA,NA
+2001900,1,6,NA,NA
+2002000,1,6,NA,NA
+2002001,1,6,NA,NA
+2002002,1,6,NA,NA
+2002003,1,6,NA,NA
+2002004,1,6,NA,NA
+2002100,1,6,NA,NA
+2002101,1,6,NA,NA
+2002102,1,6,NA,NA
+2002104,1,6,NA,NA
+2002105,1,6,NA,NA
+2002120,1,6,NA,NA
+2002125,1,6,NA,NA
+2002191,1,6,NA,NA
+2002200,1,6,NA,NA
+2002201,1,6,NA,NA

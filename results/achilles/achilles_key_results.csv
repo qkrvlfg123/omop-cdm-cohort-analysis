@@ -1,0 +1,249 @@
+"analysis_id","stratum_1","concept_name","count_value"
+1,NA,NA,2694
+2,"8532","FEMALE",1373
+2,"8507","MALE",1321
+3,"1972",NA,88
+3,"1963",NA,84
+3,"1961",NA,82
+3,"1960",NA,79
+3,"1971",NA,79
+3,"1970",NA,74
+3,"1969",NA,72
+3,"1959",NA,70
+3,"1967",NA,70
+3,"1956",NA,69
+3,"1968",NA,69
+3,"1958",NA,68
+3,"1964",NA,68
+3,"1966",NA,68
+3,"1965",NA,67
+3,"1973",NA,63
+3,"1951",NA,62
+3,"1954",NA,61
+3,"1955",NA,61
+3,"1962",NA,61
+3,"1974",NA,61
+3,"1977",NA,58
+3,"1950",NA,55
+3,"1952",NA,55
+3,"1957",NA,48
+3,"1976",NA,48
+3,"1953",NA,46
+3,"1975",NA,46
+3,"1978",NA,46
+3,"1949",NA,40
+3,"1947",NA,39
+3,"1980",NA,39
+3,"1945",NA,37
+3,"1946",NA,36
+3,"1979",NA,35
+3,"1981",NA,34
+3,"1948",NA,33
+3,"1944",NA,32
+3,"1938",NA,30
+3,"1943",NA,30
+3,"1935",NA,29
+3,"1939",NA,26
+3,"1940",NA,26
+3,"1942",NA,26
+3,"1936",NA,22
+3,"1909",NA,19
+3,"1982",NA,19
+3,"1922",NA,18
+3,"1941",NA,18
+3,"1920",NA,17
+3,"1937",NA,17
+3,"1983",NA,16
+3,"1911",NA,14
+3,"1930",NA,14
+3,"1912",NA,11
+3,"1934",NA,11
+3,"1984",NA,11
+3,"1914",NA,10
+3,"1916",NA,10
+3,"1919",NA,10
+3,"1924",NA,9
+3,"1923",NA,8
+3,"1926",NA,8
+3,"1913",NA,7
+3,"1918",NA,7
+3,"1910",NA,6
+3,"1927",NA,6
+3,"1933",NA,6
+400,"40481087","Viral sinusitis",2686
+400,"80180","Osteoarthritis",2630
+400,"4112343","Acute viral pharyngitis",2606
+400,"260139","Acute bronchitis",2543
+400,"372328","Otitis media",2025
+400,"28060","Streptococcal sore throat",1677
+400,"81151","Sprain of ankle",1357
+400,"378001","Concussion with no loss of consciousness",852
+400,"4283893","Sinusitis",833
+400,"257012","Chronic sinusitis",812
+400,"4027663","Peptic ulcer",802
+400,"4294548","Acute bacterial sinusitis",786
+400,"4218389","Whiplash injury to neck",708
+400,"78272","Sprain of wrist",677
+400,"4278672","Fracture of forearm",510
+400,"192671","Gastrointestinal hemorrhage",479
+400,"4113008","Laceration of hand",462
+400,"4155034","Laceration of forearm",459
+400,"4156265","Facial laceration",459
+400,"4152936","Laceration of thigh",455
+400,"4237458","Fracture of clavicle",449
+400,"4109685","Laceration of foot",448
+400,"4134304","Fracture subluxation of wrist",442
+400,"4059173","Fracture of ankle",427
+400,"4116491","Escherichia coli urinary tract infection",419
+400,"81893","Ulcerative colitis",413
+400,"30753","Esophagitis",408
+400,"4266809","Diverticular disease",401
+400,"4310024","Angiodysplasia of stomach",388
+400,"4285898","Polyp of colon",375
+400,"4296204","First degree burn",359
+400,"195588","Cystitis",289
+400,"4146173","Injury of tendon of the rotator cuff of shoulder",254
+400,"440086","Child attention deficit disorder",253
+400,"375671","Concussion with loss of consciousness",249
+400,"4142905","Fracture of rib",249
+400,"381316","Cerebrovascular accident",218
+400,"4296205","Second degree burn",216
+400,"317576","Coronary arteriosclerosis",191
+400,"80502","Osteoporosis",171
+400,"440448","Appendicitis",157
+400,"321042","Cardiac arrest",138
+400,"313217","Atrial fibrillation",137
+400,"4230399","Closed fracture of hip",132
+400,"378419","Alzheimer's disease",117
+400,"4084167","Acute allergic reaction",116
+400,"134438","Contact dermatitis",113
+400,"40479422","Injury of medial collateral ligament of knee",107
+400,"439777","Anemia",100
+400,"4051466","Childhood asthma",96
+400,"4035415","Tear of meniscus of knee",82
+400,"40479768","Injury of anterior cruciate ligament",80
+400,"4048171","Perennial allergic rhinitis with seasonal variation",79
+400,"4149245","Rupture of patellar tendon",79
+400,"261325","Pulmonary emphysema",77
+400,"4029498","Seizure disorder",76
+400,"4001336","Concussion injury of brain",70
+400,"4329847","Myocardial infarction",67
+400,"40486433","Perennial allergic rhinitis",64
+400,"40480160","Pathological fracture due to osteoporosis",56
+400,"133834","Atopic dermatitis",54
+400,"255848","Pneumonia",52
+400,"258780","Emphysematous bronchitis",48
+400,"4094814","Bullet wound",46
+400,"4166224","Rupture of appendix",41
+400,"196456","Gallstone",35
+400,"198809","Acute cholecystitis",35
+400,"4056621","Recurrent urinary tract infection",33
+400,"140673","Hypothyroidism",31
+400,"380378","Epilepsy",30
+400,"4132546","Traumatic brain injury",27
+400,"4280726","Seasonal allergic rhinitis",25
+400,"4299128","Third degree burn",24
+400,"4048695","Fracture of vertebral column without spinal cord injury",23
+400,"4043241","Familial Alzheimer's disease of early onset",19
+400,"80809","Rheumatoid arthritis",18
+400,"198199","Pyelonephritis",9
+700,"40213227","tetanus and diphtheria toxoids, adsorbed, preservative free, for adult use",2660
+700,"1127433","Acetaminophen 325 MG Oral Tablet",2580
+700,"40213160","poliovirus vaccine, inactivated",2140
+700,"1713671","Amoxicillin 250 MG / Clavulanate 125 MG Oral Tablet",2021
+700,"19059056","Aspirin 81 MG Oral Tablet",1927
+700,"1118084","celecoxib",1800
+700,"40213296","hepatitis A vaccine, adult dosage",1737
+700,"40213306","hepatitis B vaccine, adult dosage",1560
+700,"1127078","Acetaminophen 160 MG Oral Tablet",1428
+700,"40229134","Acetaminophen 21.7 MG/ML / Dextromethorphan Hydrobromide 1 MG/ML / doxylamine succinate 0.417 MG/ML Oral Solution",1393
+700,"19078461","Ibuprofen 200 MG Oral Tablet",1280
+700,"19133873","Penicillin V Potassium 250 MG Oral Tablet",1272
+700,"40213260","zoster vaccine, live",1140
+700,"1115171","Naproxen sodium 220 MG Oral Tablet",947
+700,"19133905","Penicillin V Potassium 500 MG Oral Tablet",856
+700,"19006318","Penicillin G 375 MG/ML Injectable Solution",831
+700,"1124300","Diclofenac",830
+700,"40213201","pneumococcal polysaccharide vaccine, 23 valent",714
+700,"920300","Nitrofurantoin 5 MG/ML Oral Suspension",630
+700,"40236824","Phenazopyridine hydrochloride 100 MG Oral Tablet",630
+700,"19128065","{7 (Inert Ingredients 1 MG Oral Tablet) / 21 (Mestranol 0.05 MG / Norethindrone 1 MG Oral Tablet) } Pack [Norinyl 1+50 28 Day]",605
+700,"40213314","Haemophilus influenzae type b vaccine, PRP-OMP conjugate",555
+700,"40213198","pneumococcal conjugate vaccine, 13 valent",453
+700,"19129655","Ampicillin 100 MG/ML Injectable Solution",432
+700,"46233988","Doxycycline Monohydrate 50 MG Oral Tablet",398
+700,"40165015","Meperidine Hydrochloride 50 MG Oral Tablet",367
+700,"19075601","clopidogrel 75 MG Oral Tablet",315
+700,"40162522","Acetaminophen 325 MG / Hydrocodone Bitartrate 7.5 MG Oral Tablet",312
+700,"40231925","Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",306
+700,"40213251","varicella virus vaccine",301
+700,"19019979","Ibuprofen 100 MG Oral Tablet",300
+700,"19128022","{7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Or",253
+700,"19073188","Amoxicillin 500 MG Oral Tablet",240
+700,"40220960","alteplase 100 MG Injection",193
+700,"19126352","Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",192
+700,"1539411","Simvastatin 20 MG Oral Tablet",182
+700,"1332419","Amlodipine 5 MG Oral Tablet",179
+700,"19073183","Amoxicillin 250 MG Oral Capsule",157
+700,"40243436","1 ML Atropine Sulfate 1 MG/ML Injection",138
+700,"46275916","1 ML Epinephrine 1 MG/ML Injection",138
+700,"19018935","Digoxin 0.125 MG Oral Tablet",137
+700,"40163554","Warfarin Sodium 5 MG Oral Tablet",137
+700,"40171902","Verapamil hydrochloride 40 MG",137
+700,"40173590","Alendronic acid 10 MG Oral Tablet",129
+700,"1310034","3 ML Amiodarone hydrochloride 50 MG/ML Prefilled Syringe",126
+700,"920334","NITROFURANTOIN, MACROCRYSTALS 50 MG Oral Capsule",119
+700,"19075001","Cefuroxime 250 MG Oral Tablet",119
+700,"40169281","60 ACTUAT Fluticasone propionate 0.25 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler",119
+700,"1551192","Prednisone 5 MG Oral Tablet",116
+700,"19008572","Hydrocortisone 10 MG/ML Topical Cream",106
+700,"40232448","Diphenhydramine Hydrochloride 25 MG Oral Tablet",105
+700,"1154615","200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",101
+700,"40169216","120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",101
+700,"19077572","Galantamine 4 MG Oral Tablet",83
+700,"19074843","Cefaclor 250 MG Oral Capsule",80
+700,"19112599","Chlorpheniramine Maleate 2 MG/ML Oral Solution",72
+700,"40236446","Methylphenidate Hydrochloride 20 MG Oral Tablet",66
+700,"19133768","Acetaminophen 750 MG / Hydrocodone Bitartrate 7.5 MG Oral Tablet",64
+700,"42902245","{5 (Ethinyl Estradiol 0.02 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.03 MG / norethindrone acetate 1 MG Oral Tablet) / 9 (Ethinyl Estradiol 0.035 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ferrous fumarate 75 MG Oral Tab",62
+700,"46233710","Doxycycline Monohydrate 100 MG Oral Tablet",61
+700,"19115351","Diazepam 5 MG [Valium]",59
+700,"19074841","12 HR Cefaclor 500 MG Extended Release Oral Tablet",58
+700,"1545959","atorvastatin 80 MG Oral Tablet",54
+700,"40224805","1 ML medroxyprogesterone acetate 150 MG/ML Injection",53
+700,"40213180","meningococcal polysaccharide (groups A, C, Y and W-135) diphtheria toxoid conjugate vaccine (MCV4P)",47
+700,"19074679","Carbamazepine 20 MG/ML Oral Suspension [Tegretol]",42
+700,"40222846","Memantine hydrochloride 2 MG/ML Oral Solution",41
+700,"1367571","heparin",35
+700,"19079524","Sodium Chloride 9 MG/ML Injectable Solution",35
+700,"35605482","2 ML Ondansetron 2 MG/ML Injection",35
+700,"35605858","1 ML Morphine Sulfate 5 MG/ML Injection",35
+700,"40220386","100 ML Propofol 10 MG/ML Injection",35
+700,"42707627","rocuronium bromide 10 MG/ML Injectable Solution",35
+700,"46275444","Piperacillin 4000 MG / tazobactam 500 MG Injection",35
+700,"19078924","Midazolam 1 MG/ML Injectable Solution",33
+700,"40174880","Levothyroxine Sodium 0.075 MG Oral Tablet",31
+700,"1594382","NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector",29
+700,"782047","Isoflurane 999 MG/ML Inhalant Solution",27
+700,"43012754","Levonorgestrel 0.00354 MG/HR Drug Implant",27
+700,"1150771","Astemizole 10 MG Oral Tablet",26
+700,"45892894","24 HR Donepezil hydrochloride 10 MG / Memantine hydrochloride 28 MG Extended Release Oral Capsule",26
+700,"40223774","Donepezil hydrochloride 23 MG [Aricept]",23
+700,"19019273","Naproxen 500 MG Oral Tablet",18
+700,"964261","Vitamin B 12 5 MG/ML Injectable Solution",16
+700,"19016749","remifentanil",16
+700,"19007333","Methotrexate 10 MG Oral Tablet",14
+700,"40223768","Donepezil hydrochloride 10 MG Oral Tablet",14
+700,"19127922","{28 (Norethindrone 0.35 MG Oral Tablet) } Pack [Camila 28 Day]",13
+700,"19134077","cyclosporine, modified 100 MG [Neoral]",11
+700,"836659","Tacrine 10 MG Oral Capsule",10
+700,"19129144","{28 (Norethindrone 0.35 MG Oral Tablet) } Pack [Jolivette 28 Day]",10
+700,"40223834","Fexofenadine hydrochloride 60 MG Oral Tablet",10
+700,"1107882","Loratadine 10 MG Oral Tablet",8
+700,"1154029","Fentanyl",8
+700,"1150837","Terfenadine 60 MG Oral Tablet",7
+700,"19059528","Alfentanil",7
+700,"19128263","{7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Tr",7
+700,"19132304","Levonorgestrel 0.000833 MG/HR Intrauterine System [Mirena]",7
+700,"19077344","ferrous sulfate 325 MG Oral Tablet",6
+700,"19128009","{7 (Ethinyl Estradiol 0.01 MG Oral Tablet) / 84 (Ethinyl Estradiol 0.03 MG / Levonorgestrel 0.15 MG Oral Tablet) } Pack [Seasonique]",6
