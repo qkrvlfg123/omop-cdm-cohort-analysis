@@ -7,7 +7,7 @@
 --
 -- 설계 : 신규 사용자 코호트(New-User Cohort Design)
 --   - 지표일(index date) = 해당 약을 생애 처음 처방받은 날
---   - 왜 "신규" 사용자만? 이미 오래 복용 중인 사람(prevalent user)은 부작용을 겪고도
+--   - "신규" 사용자만 포함하는 이유: 이미 오래 복용 중인 사람(prevalent user)은 부작용을 겪고도
 --     버틴 "생존자"라서, 포함하면 약이 실제보다 안전해 보이는 편향이 생긴다.
 --     약물역학(pharmacoepidemiology)의 표준 설계다.
 --
@@ -87,7 +87,7 @@ SELECT
          THEN 1 ELSE 0 END                                 AS is_adult,
 
     -- [기준 D] 지표일 또는 그 이전에 골관절염(80180) 진단이 있다 = 적응증 확인.
-    --   EXISTS: "조건에 맞는 행이 하나라도 있는가"만 본다. JOIN 과 달리 행이 불어나지 않는다.
+    --   EXISTS: 조건에 맞는 행이 하나라도 있는지만 본다. JOIN 과 달리 행이 불어나지 않는다.
     CASE WHEN EXISTS (
             SELECT 1 FROM condition_occurrence co
             WHERE co.person_id = fe.person_id

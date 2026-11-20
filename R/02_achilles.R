@@ -2,7 +2,7 @@
 # 02_achilles.R
 # 목적: OHDSI ACHILLES 로 CDM 데이터베이스 전체를 특성화(characterization)한다.
 #
-# ACHILLES 란?
+# ACHILLES
 #   (Automated Characterization of Health Information at Large-scale Longitudinal
 #    Evidence Systems)
 #   - CDM 테이블 전체를 훑어 수백 개의 표준 요약 통계를 자동으로 계산하는 OHDSI 공식 R 패키지.

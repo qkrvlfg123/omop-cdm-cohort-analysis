@@ -4,7 +4,7 @@
 -- 목적 : "이 데이터로 무엇을 할 수 있고 무엇을 하면 안 되는지"를 숫자로 확인한다.
 -- 기법 : NOT EXISTS(안티 조인), LEFT JOIN + IS NULL, 조건부 집계, UNION ALL
 --
--- 왜 하는가 : 실제 RWD(Real-World Data)는 연구용으로 수집된 게 아니라서 구멍이 많다.
+-- 하는 이유 : 실제 RWD(Real-World Data)는 연구용으로 수집된 게 아니라서 구멍이 많다.
 --   품질 점검 없이 분석하면 "데이터가 없는 것"을 "사건이 없는 것"으로 착각하게 된다.
 --   OHDSI 에서는 이 작업을 ACHILLES / DataQualityDashboard 가 자동으로 해 주는데,
 --   여기서는 원리를 이해하려고 대표 항목을 직접 SQL로 짰다.

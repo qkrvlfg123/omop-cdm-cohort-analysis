@@ -8,7 +8,7 @@ OMOP Common Data Model(CDM) 형식의 의료 데이터에서 **SQL로 환자 코
 | 데이터 | OHDSI **Eunomia GiBleed** (Synthea 합성 환자 2,694명, OMOP CDM v5.3) + 비교용 **MIMIC-IV demo OMOP** (100명) |
 | 연구 질문 | 골관절염 환자 중 celecoxib / diclofenac **신규 사용자**의 특성은 어떻게 다르고, 처방 후 위장관 출혈은 얼마나 발생하는가 |
 | 도구 | SQL (DuckDB), R (Eunomia, ACHILLES), Python (pandas, matplotlib) |
-| 산출물 | 난이도별 SQL 18개, 코호트 선정 흐름표, 기저 특성표(Table 1), 발생률·층화 분석, ACHILLES DB 특성화 |
+| 산출물 | 난이도별 SQL 21개, 코호트 선정 흐름표, 기저 특성표(Table 1), 발생률·층화 분석, ACHILLES DB 특성화 |
 
 > **해석 주의** — 이 데이터는 교육용 **합성 데이터**입니다. 아래 수치는 분석 절차를 보여 주기 위한 것이며, 두 약물의 실제 안전성에 대한 근거가 아닙니다.
 
@@ -17,7 +17,7 @@ OMOP Common Data Model(CDM) 형식의 의료 데이터에서 **SQL로 환자 코
 ## 1. 핵심 결과 요약
 
 1. **코호트 구축**: celecoxib 또는 diclofenac 첫 처방 환자 2,694명 중, 선정기준을 적용해 **2,630명**(celecoxib 1,800 / diclofenac 830)을 최종 코호트로 확정했습니다. 탈락한 64명은 모두 "지표일이 관찰기간 밖"인 경우였습니다.
-2. **보정 전 비교**: 1년 내 위장관 출혈 발생률은 celecoxib 19.7%, diclofenac 14.9%로 celecoxib 쪽이 높게 나왔습니다(위험비 1.32).
+2. **보정 전 비교**: 1년 내 위장관 출혈 발생률은 celecoxib 19.7%, diclofenac 14.9%로 celecoxib 쪽이 높게 나왔습니다(위험도비 RR 1.32, 95% 신뢰구간 1.09–1.59).
 3. **그러나 두 집단은 처음부터 달랐습니다**: celecoxib 군은 소화성 궤양 과거력이 36.6%로 diclofenac 군(15.9%)의 2배 이상이었습니다(SMD 0.48). 위장관 위험이 높은 환자에게 celecoxib이 더 많이 처방된 구조입니다.
 4. **층화하면 결론이 달라집니다**: 궤양 과거력이 없는 환자만 보면 celecoxib 9.8% vs diclofenac 14.5%로 **방향이 뒤집힙니다**. 과거력이 있는 층에서는 36.9% vs 17.4%입니다.
 
@@ -171,15 +171,21 @@ SMD(표준화 평균차)는 두 집단의 차이를 표준편차 단위로 나�
 
 ![누적 발생률](results/figures/fig4_cumulative_incidence.png)
 
+그림의 끝값(19.8%, 15.0%)은 Kaplan–Meier 추정치이고, 표의 누적 발생률(19.7%, 14.9%)은 사건 수를 환자 수로 나눈 단순 비율입니다. 추적이 1년 전에 끝난 환자를 다루는 방식이 달라 0.1%p 차이가 납니다.
+
 **층화 분석** (그림 5)
 
-| 층 | celecoxib | diclofenac | 위험비 |
+| 층 | celecoxib | diclofenac | 위험도비 RR (95% 신뢰구간) |
 |---|---|---|---|
-| 전체 (보정 전) | 19.7% (355/1,800) | 14.9% (124/830) | 1.32 |
-| 궤양 과거력 없음 | 9.8% (112/1,142) | 14.5% (101/698) | 0.68 |
-| 궤양 과거력 있음 | 36.9% (243/658) | 17.4% (23/132) | 2.12 |
+| 전체 (보정 전) | 19.7% (355/1,800) | 14.9% (124/830) | 1.32 (1.09–1.59) |
+| 궤양 과거력 없음 | 9.8% (112/1,142) | 14.5% (101/698) | 0.68 (0.53–0.87) |
+| 궤양 과거력 있음 | 36.9% (243/658) | 17.4% (23/132) | 2.12 (1.44–3.11) |
 
-층마다 위험비의 방향이 다릅니다. 이런 경우 하나의 보정 위험비로 요약하는 것은 적절하지 않고, 층별 결과를 따로 보고해야 합니다. 여기서는 변수 하나로만 층화했으므로 다른 교란 요인은 남아 있습니다.
+위험도비(risk ratio)는 1년 누적 발생률의 비이며, Cox 모형의 위험비(hazard ratio)와는 다른 지표입니다. 신뢰구간은 log(RR)의 정규근사로 계산했습니다(`results/tables/stratified_incidence.csv`).
+
+궤양 과거력으로 층을 고정한 Mantel–Haenszel 위험도비는 **1.02**입니다(`results/tables/risk_ratio_summary.csv`). 보정 전의 1.32가 이 변수 하나를 고려하면 거의 1로 내려가므로, 보정 전 차이의 대부분이 두 집단의 궤양 과거력 분포 차이에서 나온 것입니다.
+
+다만 층마다 위험도비의 방향이 다릅니다(0.68과 2.12). 이는 교란만이 아니라 효과 변경(effect modification)이 함께 있다는 뜻이어서, 하나의 보정값(1.02)으로 요약하는 것은 적절하지 않고 층별 결과를 따로 보고해야 합니다. 여기서는 변수 하나로만 층화했으므로 다른 교란 요인은 남아 있습니다.
 
 ---
 
@@ -275,7 +281,7 @@ OHDSI 공식 특성화 도구 [ACHILLES](https://github.com/OHDSI/Achilles)를 �
 | 진단 concept 이름 조인 | 100% | 0% |
 | `concept_ancestor` | 있음 | 없음 |
 
-- **구조가 같아도 가능한 분석은 다릅니다.** Eunomia는 평생에 걸친 외래 위주 기록이라 장기 코호트 연구 형태에 맞고, MIMIC은 짧은 입원 기간에 검사·투약이 밀집된 급성기 데이터입니다.
+- **구조가 같아도 가능한 분석은 다릅니다.** Eunomia는 평생에 걸친 기록이라 장기 코호트 연구 형태에 맞고, MIMIC은 짧은 입원 기간에 검사·투약이 밀집된 급성기 데이터입니다.
 - **MIMIC demo 공개본에는 표준 용어 사전이 들어 있지 않습니다.** `concept` 테이블에 MIMIC 자체 코드만 있어서 concept 이름 조인과 성분 롤업이 되지 않습니다. 실제로 쓰려면 OHDSI Athena에서 용어집을 받아 적재해야 합니다. CDM이 "구조 표준 + 용어 표준" 두 부분으로 이루어져 있다는 점을 확인한 부분입니다.
 - MIMIC은 비식별화를 위해 날짜를 2100년대로 옮겼으므로 연도별 추세 분석에는 쓸 수 없습니다.
 
@@ -315,7 +321,7 @@ Rscript R/01_setup_eunomia.R
 
 # 3) 파이썬 패키지 설치 후 분석 실행
 pip install -r requirements.txt
-python src/run_sql.py            # SQL 18개 실행, results/tables/ 저장
+python src/run_sql.py            # SQL 21개 실행, results/tables/ 저장
 python src/analyze_cohort.py     # Table 1, 그림 생성
 python src/compare_mimic_demo.py # (선택) MIMIC-IV demo 자동 다운로드 후 비교
 
@@ -338,7 +344,7 @@ SQL은 DuckDB 문법으로 작성했습니다. PostgreSQL과 거의 같지만 `D
 
 **다음 단계**
 - 성향점수(propensity score) 매칭 또는 가중치로 여러 공변량을 동시에 보정하고, 보정 전후 SMD 비교
-- Cox 비례위험 모형으로 위험비와 신뢰구간 추정
+- Cox 비례위험 모형으로 위험비(hazard ratio)와 신뢰구간 추정
 - 같은 코호트를 OHDSI ATLAS / CohortMethod로 정의해 직접 짠 SQL과 결과 비교
 - MIMIC-IV demo에 Athena 표준 용어집을 적재해 약물 성분 롤업까지 동일하게 실행
 - DataQualityDashboard로 데이터 품질 점검 확장

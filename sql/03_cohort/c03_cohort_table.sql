@@ -9,7 +9,7 @@
 --   cohort_start_date    : 코호트 진입일 (= 지표일)
 --   cohort_end_date      : 코호트 종료일 (= 추적 종료일)
 --
--- 왜 표준 형식으로 저장하나 : OHDSI 분석 도구(ATLAS, CohortMethod, FeatureExtraction 등)는
+-- 표준 형식으로 저장하는 이유 : OHDSI 분석 도구(ATLAS, CohortMethod, FeatureExtraction 등)는
 --   전부 이 4컬럼 테이블을 입력으로 받는다. 형식만 맞추면 내가 SQL로 만든 코호트를
 --   표준 도구에 그대로 넘길 수 있다. "코호트 = (누가, 언제부터, 언제까지)" 라는 정의 자체다.
 --

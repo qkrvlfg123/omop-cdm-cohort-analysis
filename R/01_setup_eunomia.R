@@ -3,13 +3,13 @@
 # 목적: OHDSI Eunomia 패키지로 합성 OMOP CDM 데이터셋(GiBleed)을 로컬에 내려받아
 #       DuckDB 파일(data/eunomia_gibleed.duckdb)로 만든다.
 #
-# 왜 Eunomia인가?
+# Eunomia를 쓴 이유
 #   - OHDSI(OMOP CDM을 만든 국제 컨소시엄)가 교육/테스트용으로 공식 배포하는 데이터셋.
 #   - Synthea(합성 환자 생성기)로 만든 가상 환자라 개인정보가 없고, 크레덴셜·심사가 필요 없다.
 #   - 실제 병원 CDM과 "테이블 구조와 컬럼 이름이 동일"하므로, 여기서 짠 SQL은
 #     실제 CDM에서도 스키마 이름만 바꾸면 그대로 돌아간다. (= CDM을 쓰는 이유 자체)
 #
-# 왜 DuckDB인가?
+# DuckDB를 쓴 이유
 #   - 서버 설치 없이 파일 하나로 동작하는 분석용(OLAP) DB. 윈도우 함수·CTE·날짜 연산 등
 #     표준 SQL 지원이 좋아 PostgreSQL 계열 문법과 거의 같다.
 #   - SQLite는 DATE 타입이 없어 날짜 계산이 불편하다 → 코호트 분석은 날짜 연산이 핵심이라 DuckDB 선택.

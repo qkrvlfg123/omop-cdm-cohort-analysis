@@ -4,7 +4,7 @@
 -- 목적 : 처방 기록을 성분 기준으로 집계한다. (약처방 분석의 첫 단계)
 -- 기법 : 3-테이블 JOIN, concept_ancestor(계층 테이블) 활용
 --
--- 왜 필요한가 — drug_exposure 에는 약이 "제품 수준"으로 들어 있다
+-- 필요한 이유 — drug_exposure 에는 약이 "제품 수준"으로 들어 있다
 --   예) 'Aspirin 81 MG Oral Tablet', 'Ibuprofen 200 MG Oral Tablet', 'Ibuprofen 100 MG ...'
 --   "이부프로펜 복용자"를 세려면 용량·제형이 다른 제품을 모두 찾아야 한다.
 --   제품명을 LIKE '%ibuprofen%' 로 찾는 것은 누락·오탐 위험이 크다.
@@ -30,5 +30,5 @@ JOIN concept ing
   ON ing.concept_id = ca.ancestor_concept_id            -- 그 "조상" 중에서
  AND ing.concept_class_id = 'Ingredient'                -- 성분 수준만 남긴다
 GROUP BY ing.concept_id, ing.concept_name
-ORDER BY n_persons DESC
+ORDER BY n_persons DESC, ingredient_concept_id   -- 환자 수가 같을 때 순서가 실행마다 바뀌지 않도록
 LIMIT 20;

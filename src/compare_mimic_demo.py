@@ -4,7 +4,7 @@ compare_mimic_demo.py — 같은 SQL 을 "다른 CDM 데이터베이스"에 그�
 실행:  python src/compare_mimic_demo.py     (프로젝트 루트에서)
 
 비교 대상
-- Eunomia GiBleed : Synthea 합성 환자 2,694명 (외래 위주의 일생 기록)
+- Eunomia GiBleed : Synthea 합성 환자 2,694명 (일생에 걸친 기록, 방문 유형은 입원 한 가지)
 - MIMIC-IV demo   : 미국 Beth Israel Deaconess 병원 중환자실 실제 환자 100명의 비식별 공개본을
                     OMOP CDM 으로 변환한 것 (PhysioNet, 크레덴셜 없이 공개)
                     https://physionet.org/content/mimic-iv-demo-omop/0.9/

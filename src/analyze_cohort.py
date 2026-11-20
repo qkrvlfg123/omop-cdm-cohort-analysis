@@ -3,8 +3,8 @@ analyze_cohort.py — SQL 로 뽑은 코호트를 요약(Table 1)하고 그림�
 
 실행:  python src/analyze_cohort.py      (프로젝트 루트에서)
 
-역할 분담 (왜 이렇게 나눴는지)
-- "누가 코호트인가 / 어떤 변수를 갖는가"는 전부 SQL(sql/03_cohort)이 결정한다.
+역할 분담과 그 이유
+- 코호트 구성원과 변수 정의는 전부 SQL(sql/03_cohort)이 결정한다.
 - 파이썬은 SQL 결과(환자당 1행 테이블)를 받아 통계 요약과 시각화만 한다.
   → 데이터 추출 로직이 한 곳(SQL)에만 있어야 검증·재현이 쉽다.
 
@@ -58,7 +58,7 @@ def save(fig, name):
 def smd(x1: pd.Series, x2: pd.Series, binary: bool) -> float:
     """표준화 평균차(Standardized Mean Difference).
 
-    두 집단의 차이를 '표준편차 몇 개만큼 떨어져 있는가'로 나타낸 값.
+    두 집단의 차이를 표준편차 단위로 나타낸 값.
     - p-value 는 표본이 크면 사소한 차이에도 작아지지만, SMD 는 표본 크기와 무관하다.
       그래서 RWE 연구에서는 집단 간 균형을 p-value 가 아닌 SMD 로 본다.
     - 관례: |SMD| > 0.1 이면 "의미 있는 불균형"(교란 가능성)으로 판단.
@@ -75,7 +75,7 @@ def smd(x1: pd.Series, x2: pd.Series, binary: bool) -> float:
 def kaplan_meier(time: np.ndarray, event: np.ndarray) -> pd.DataFrame:
     """Kaplan-Meier 추정으로 누적 발생률(1 - 생존확률)을 계산한다.
 
-    왜 단순 비율(사건 수 / 환자 수)이 아니라 KM 인가?
+    단순 비율(사건 수 / 환자 수) 대신 KM 을 쓰는 이유
     - 추적이 중간에 끝난 환자(중도절단: 관찰기간 종료)는 "그 시점까지는 사건이 없었다"는
       정보만 준다. KM 은 각 시점에서 '아직 추적 중인 사람(risk set)'만 분모로 써서
       이 정보를 버리지도, 과대평가하지도 않는다.
@@ -211,7 +211,7 @@ def main():
     ax.set_xlabel("지표일(첫 처방) 이후 일수")
     ax.set_ylabel("위장관 출혈 누적 발생률 (%)")
     ax.legend(frameon=False, loc="lower right", bbox_to_anchor=(0.85, 0.05))
-    ax.set_title("그림 4. 보정 전(crude) 누적 발생률: 출혈은 모두 처방 후 90일 안에 발생")
+    ax.set_title("그림 4. Kaplan-Meier 누적 발생률(보정 전): 출혈은 모두 처방 후 90일 안에 발생")
     save(fig, "fig4_cumulative_incidence.png")
 
     # -------------------------------------------------------------------------
@@ -225,11 +225,31 @@ def main():
                  .agg(n_persons="size", n_events="sum").reset_index())
     strat = pd.concat([overall, strat], ignore_index=True)
     strat["risk_pct"] = (100 * strat["n_events"] / strat["n_persons"]).round(1)
-    # 위험비(Risk Ratio) = celecoxib 발생률 / diclofenac 발생률  (1 보다 크면 celecoxib 쪽이 높음)
-    wide = strat.pivot(index="stratum", columns="cohort_name", values="risk_pct")
-    strat["risk_ratio_cele_vs_diclo"] = strat["stratum"].map((wide["celecoxib"] / wide["diclofenac"]).round(2))
+    # 위험도비(Risk Ratio, RR) = celecoxib 누적 발생률 / diclofenac 누적 발생률  (1 보다 크면 celecoxib 쪽이 높음)
+    #   - 반올림한 백분율이 아니라 사건 수·환자 수 원값으로 계산한다.
+    #   - 95% 신뢰구간: log(RR) 의 정규근사. SE = sqrt(1/a - 1/n1 + 1/c - 1/n0)
+    #   - Cox 모형의 위험비(Hazard Ratio)와는 다른 지표다. 여기서는 1년 누적 발생률의 비만 본다.
+    ev = strat.pivot(index="stratum", columns="cohort_name", values="n_events")
+    n = strat.pivot(index="stratum", columns="cohort_name", values="n_persons")
+    rr = (ev["celecoxib"] / n["celecoxib"]) / (ev["diclofenac"] / n["diclofenac"])
+    se = np.sqrt(1 / ev["celecoxib"] - 1 / n["celecoxib"] + 1 / ev["diclofenac"] - 1 / n["diclofenac"])
+    strat["risk_ratio_cele_vs_diclo"] = strat["stratum"].map(rr.round(2))
+    strat["rr_ci95_low"] = strat["stratum"].map(np.exp(np.log(rr) - 1.96 * se).round(2))
+    strat["rr_ci95_high"] = strat["stratum"].map(np.exp(np.log(rr) + 1.96 * se).round(2))
     strat.to_csv(TAB_DIR / "stratified_incidence.csv", index=False, encoding="utf-8-sig")
     print("\n[층화 분석]\n", strat.to_string(index=False))
+
+    # Mantel-Haenszel 공통 위험도비: 층(궤양 과거력 유무)을 고정한 채 두 약을 비교한 요약값.
+    #   보정 전 RR 과 비교하면 '궤양 과거력' 하나가 차이를 얼마나 설명하는지 볼 수 있다.
+    #   단, 두 층의 RR 방향이 반대이므로(효과 변경) 하나의 값으로 요약하는 데에는 한계가 있다.
+    layers = [s for s in rr.index if s != "전체 (보정 전)"]
+    tot = n.loc[layers].sum(axis=1)
+    mh = ((ev.loc[layers, "celecoxib"] * n.loc[layers, "diclofenac"] / tot).sum()
+          / (ev.loc[layers, "diclofenac"] * n.loc[layers, "celecoxib"] / tot).sum())
+    pd.DataFrame([{"measure": "crude_risk_ratio", "value": round(float(rr["전체 (보정 전)"]), 3)},
+                  {"measure": "mantel_haenszel_risk_ratio_by_prior_peptic_ulcer", "value": round(float(mh), 3)}]
+                 ).to_csv(TAB_DIR / "risk_ratio_summary.csv", index=False, encoding="utf-8-sig")
+    print(f"\n보정 전 RR {rr['전체 (보정 전)']:.2f} → 궤양 과거력 층화 Mantel-Haenszel RR {mh:.2f}")
 
     # Fig 5. 층화 발생률 (집단 2개 → 묶은 막대, 값 직접 표기)
     order = ["전체 (보정 전)", "궤양 과거력 없음", "궤양 과거력 있음"]
