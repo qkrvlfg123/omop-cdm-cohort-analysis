@@ -29,11 +29,11 @@ OMOP Common Data Model(CDM) 형식의 의료 데이터에서 **SQL로 환자 코
 
 ---
 
-## 2. 이 프로젝트가 실무와 대응되는 지점
+## 2. 분석 단계와 구현 위치
 
-헬스케어 데이터(RWE·임상·복약) 직무 공고에서 공통으로 요구하는 역량과, 이 레포에서 그것을 다룬 위치입니다.
+CDM 기반 코호트 연구의 각 단계와, 이 레포에서 그것을 구현한 위치입니다.
 
-| 실무에서 하는 일 | 이 레포에서 한 일 | 위치 |
+| 분석 단계 | 이 레포에서 한 일 | 위치 |
 |---|---|---|
 | CDM 구조 이해, 표준 용어(concept) 다루기 | 핵심 테이블 관계 정리, `concept` / `concept_ancestor`로 약물을 성분 단위로 롤업 | [3장](#3-omop-cdm-핵심-테이블-구조), `sql/01_basic/b04` |
 | 연구 계획서의 선정·제외기준을 SQL로 구현 | 신규 사용자 설계, 관찰기간·washout·적응증·결과 과거력 기준을 플래그로 구현 | `sql/03_cohort/c01` |
@@ -44,7 +44,7 @@ OMOP Common Data Model(CDM) 형식의 의료 데이터에서 **SQL로 환자 코
 | 데이터 품질 점검 | 직접 짠 SQL 점검 8종 + OHDSI ACHILLES 251종 분석 | `sql/02_intermediate/i01`, `R/02_achilles.R` |
 | 다기관 공통 분석 (CDM의 목적) | 같은 SQL 파일을 다른 CDM DB(MIMIC-IV demo)에 수정 없이 실행 | `src/compare_mimic_demo.py` |
 
-실제 병원 CDM과 테이블·컬럼 구조가 같으므로, 여기서 작성한 SQL은 스키마 이름과 concept ID만 바꾸면 실제 환경에서도 동작합니다. 다만 실제 데이터는 규모(수백만 명), 결측·오류, 여러 번의 관찰기간, 복잡한 용어 매핑이 더해지므로 이 프로젝트는 "절차와 사고방식을 익힌 것"이지 실무 경험을 대체하지는 않습니다.
+실제 병원 CDM과 테이블·컬럼 구조가 같으므로, 여기서 작성한 SQL은 스키마 이름과 concept ID만 바꾸면 실제 환경에서도 동작합니다. 다만 실제 데이터는 규모(수백만 명), 결측·오류, 여러 번의 관찰기간, 복잡한 용어 매핑이 더해지므로 실제 환경에 옮길 때는 추가 검증이 필요합니다.
 
 ---
 
@@ -301,7 +301,7 @@ omop-cdm-cohort-analysis/
 │   ├── tables/                 # 쿼리 결과 CSV
 │   ├── figures/                # 그림
 │   └── achilles/               # ACHILLES 결과
-└── docs/interview_notes.md     # 설계 결정과 예상 질문 정리
+└── docs/interview_notes.md     # 설계 결정 정리
 ```
 
 **필요 환경**: R 4.x, Java 17 (Eunomia·ACHILLES가 사용), Python 3.10+
