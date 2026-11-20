@@ -301,7 +301,7 @@ omop-cdm-cohort-analysis/
 │   ├── tables/                 # 쿼리 결과 CSV
 │   ├── figures/                # 그림
 │   └── achilles/               # ACHILLES 결과
-└── docs/interview_notes.md     # 설계 결정 정리
+└── docs/design_notes.md        # 설계 결정 정리
 ```
 
 **필요 환경**: R 4.x, Java 17 (Eunomia·ACHILLES가 사용), Python 3.10+
